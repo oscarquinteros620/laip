@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Transparencia Institucional</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Portal de Transparencia Institucional</h1>
+    <nav>
+      <button onclick="mostrarSeccion('inicio')">Inicio</button>
+      <button onclick="mostrarSeccion('solicitudes')">Solicitudes</button>
+      <button onclick="mostrarSeccion('datos')">Datos Abiertos</button>
+      <button onclick="mostrarSeccion('legal')">Marco Legal</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Inicio -->
+    <section id="inicio" class="activo">
+      <h2>Bienvenido</h2>
+      <p>Este portal permite gestionar solicitudes de información pública y publicar datos abiertos conforme a la <b>Ley de Acceso a la Información Pública (LAIP)</b>.</p>
+    </section>
+
+    <!-- Solicitudes -->
+    <section id="solicitudes">
+      <h2>Solicitud de Información</h2>
+      <form id="formSolicitud">
+        <label>Nombre completo:</label>
+        <input type="text" id="nombre" required>
+
+        <label>Correo electrónico:</label>
+        <input type="email" id="correo" required>
+
+        <label>Descripción de la información solicitada:</label>
+        <textarea id="descripcion" required></textarea>
+
+        <button type="submit">Enviar Solicitud</button>
+      </form>
+
+      <h3>Solicitudes Recibidas</h3>
+      <ul id="listaSolicitudes"></ul>
+    </section>
+
+    <!-- Datos Abiertos -->
+    <section id="datos">
+      <h2>Datos Abiertos</h2>
+      <p>Consulta información pública disponible de la institución:</p>
+      <ul id="listaDatos">
+        <li><a href="#">Presupuesto Anual 2025 (CSV)</a></li>
+        <li><a href="#">Contrataciones y Compras (JSON)</a></li>
+        <li><a href="#">Listado de Personal (XLSX)</a></li>
+      </ul>
+    </section>
+
+    <!-- Marco Legal -->
+    <section id="legal">
+      <h2>Marco Legal - LAIP</h2>
+      <p>La <b>Ley de Acceso a la Información Pública</b> (LAIP) establece que toda institución pública está obligada a:</p>
+      <ul>
+        <li>Publicar información sobre su organización, presupuesto y contrataciones.</li>
+        <li>Responder a las solicitudes de información dentro de los plazos legales.</li>
+        <li>Facilitar datos abiertos a la ciudadanía.</li>
+      </ul>
+      <p><b>Sanciones:</b> El incumplimiento puede generar sanciones administrativas o la intervención del Instituto de Acceso a la Información Pública.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Portal de Transparencia Institucional - Ficticio</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
