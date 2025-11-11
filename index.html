@@ -4,162 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DNGDT - Portal de Transparencia y Acceso a la Información Pública</title>
-  <style>
-    /* Estilos (CSS) */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f4f6f8;
-      color: #333;
-    }
-
-    header {
-      background-color: #003366; /* Azul Oscuro - Color Institucional */
-      color: white;
-      text-align: center;
-      padding: 15px 0;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    header h1 {
-      margin: 5px 0;
-      font-size: 1.8em;
-    }
-    
-    header p {
-      margin: 0;
-      font-size: 1em;
-      font-style: italic;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav button {
-      background-color: #0055a5;
-      border: none;
-      color: white;
-      padding: 10px 15px;
-      margin: 5px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    nav button:hover {
-      background-color: #0077cc;
-    }
-
-    main {
-      padding: 20px;
-      padding-bottom: 70px; /* Espacio para el footer fijo */
-    }
-
-    section {
-      display: none;
-      background: white;
-      padding: 25px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    section.activo {
-      display: block;
-    }
-
-    h2 {
-      color: #003366;
-      border-bottom: 2px solid #0055a5;
-      padding-bottom: 5px;
-      margin-top: 0;
-    }
-
-    h3 {
-      color: #0055a5;
-      margin-top: 20px;
-    }
-
-    form label {
-      font-weight: bold;
-      margin-top: 10px;
-      display: block;
-    }
-
-    form input, form textarea {
-      display: block;
-      width: calc(100% - 20px);
-      margin-bottom: 15px;
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-    }
-
-    button[type="submit"] {
-      background-color: #004b8d;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    button[type="submit"]:hover {
-      background-color: #0066cc;
-    }
-
-    footer {
-      text-align: center;
-      background-color: #003366;
-      color: white;
-      padding: 15px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
-      font-size: 0.9em;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    ul li {
-      background-color: #eef3f8;
-      margin-bottom: 8px;
-      padding: 12px;
-      border-left: 5px solid #0055a5;
-      border-radius: 5px;
-    }
-    
-    .alerta-legal {
-      background-color: #fff3cd;
-      color: #856404;
-      border: 1px solid #ffeeba;
-      padding: 15px;
-      border-radius: 5px;
-      margin-top: 15px;
-    }
-    
-    .data-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 15px;
-    }
-    .data-table th, .data-table td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: left;
-    }
-    .data-table th {
-        background-color: #0055a5;
-        color: white;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -255,14 +100,24 @@
       <p>Toda solicitud será respondida en el plazo legal máximo de **10 días hábiles (Art. 71 LAIP)**.</p>
       <form id="formSolicitud">
         <label for="dui">DUI (sin guiones, opcional):</label>
-        <input type="text" id="dui" pattern="[0-9]{8}[0-9]" placeholder="00000000-0">
+        <input type="text" id="dui" pattern="[0-9]{8}-[0-9]" placeholder="00000000-0">
 
-        <label for="nombre">Nombre completo (o seudónimo):</label>
+        <label for="nombre">Nombre completo (o seudónimo, si no desea identificarse):</label>
         <input type="text" id="nombre" required>
 
         <label for="correo">Correo electrónico (para notificación):</label>
         <input type="email" id="correo" required>
-
+        
+        <label for="categoria">Categoría de la Información Solicitada:</label>
+        <select id="categoria" required>
+            <option value="">-- Seleccione una Categoría --</option>
+            <option value="presupuesto">Presupuestos y Gastos</option>
+            <option value="contratacion">Contrataciones y Licitaciones</option>
+            <option value="rrhh">Recursos Humanos y Planillas</option>
+            <option value="auditoria">Informes de Auditoría</option>
+            <option value="proyectos">Proyectos y Obras</option>
+            <option value="otro">Otra Información no listada</option>
+        </select>
         <label for="descripcion">Descripción clara y precisa de la información solicitada:</label>
         <textarea id="descripcion" rows="5" required></textarea>
 
@@ -315,39 +170,7 @@
     <p>© 2025 Dirección Nacional de Gestión y Desarrollo Territorial (DNGDT) | Unidad de Acceso a la Información Pública | Diciembre 2025.</p>
   </footer>
 
-  <script>
-    // JavaScript para la funcionalidad de navegación y simulación del formulario.
-    document.addEventListener('DOMContentLoaded', () => {
-      mostrarSeccion('inicio');
-    });
-
-    function mostrarSeccion(id) {
-      document.querySelectorAll('section').forEach(section => {
-        section.classList.remove('activo');
-      });
-      document.getElementById(id).classList.add('activo');
-    }
-
-    document.getElementById('formSolicitud').addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      const nombre = document.getElementById('nombre').value;
-      const descripcion = document.getElementById('descripcion').value;
-      const lista = document.getElementById('listaSolicitudes');
-
-      const newId = 'S-2025-' + Math.floor(Math.random() * 1000).toString().padStart(4, '0');
-
-      const newSolicitud = document.createElement('li');
-      newSolicitud.innerHTML = `**ID: ${newId}** - Solicitud sobre: ${descripcion.substring(0, 50)}... **Estado:** Recibida (Respuesta máxima en 10 días hábiles).`;
-
-      lista.prepend(newSolicitud);
-
-      alert(`Su solicitud ha sido enviada con el ID: ${newId}. Se responderá en el plazo legal (Art. 71 LAIP).`);
-
-      this.reset();
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
-
 
