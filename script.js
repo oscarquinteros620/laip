@@ -25,8 +25,9 @@ document.getElementById('formSolicitud').addEventListener('submit', function(e) 
     const lista = document.getElementById('listaSolicitudes');
 
     // Validación opcional del DUI (si el usuario lo introduce)
-    if (dui !== '' && !/^[0-9]{8}-[0-9]$/.test(dui)) {
-        alert('Formato de DUI inválido. Debe ser 8 dígitos, un guion, y 1 dígito (ej: 00000000-0). Por favor, corrija o déjelo en blanco.');
+    // Permite formato "00000000-0" O formato "000000000" (9 dígitos sin guion)
+    if (dui !== '' && !(/^[0-9]{8}-[0-9]$/.test(dui) || /^[0-9]{9}$/.test(dui))) {
+        alert('Formato de DUI inválido. Debe ser 9 dígitos en total, con o sin guion (ej: 00000000-0 o 000000000). Por favor, corrija o déjelo en blanco.');
         return; // Detiene el envío si el formato es incorrecto
     }
     
@@ -48,3 +49,4 @@ document.getElementById('formSolicitud').addEventListener('submit', function(e) 
     // Limpiar el formulario
     this.reset();
 });
+
