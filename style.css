@@ -1,3 +1,4 @@
+/* Estilos (CSS) para DNGDT - Portal de Transparencia */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,10 +7,22 @@ body {
 }
 
 header {
-  background-color: #003366;
+  background-color: #003366; /* Azul Oscuro - Color Institucional */
   color: white;
   text-align: center;
   padding: 15px 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 5px 0;
+  font-size: 1.8em;
+}
+
+header p {
+  margin: 0;
+  font-size: 1em;
+  font-style: italic;
 }
 
 nav {
@@ -24,6 +37,7 @@ nav button {
   margin: 5px;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 nav button:hover {
@@ -32,48 +46,113 @@ nav button:hover {
 
 main {
   padding: 20px;
+  padding-bottom: 70px; /* Espacio para el footer fijo */
 }
 
 section {
   display: none;
   background: white;
-  padding: 20px;
+  padding: 25px;
+  margin-bottom: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 section.activo {
   display: block;
 }
 
-form input, form textarea {
+h2 {
+  color: #003366;
+  border-bottom: 2px solid #0055a5;
+  padding-bottom: 5px;
+  margin-top: 0;
+}
+
+h3 {
+  color: #0055a5;
+  margin-top: 20px;
+}
+
+/* Estilos de formulario */
+form label {
+  font-weight: bold;
+  margin-top: 10px;
   display: block;
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 8px;
+}
+
+form input, form textarea, form select {
+  display: block;
+  width: calc(100% - 20px);
+  margin-bottom: 15px;
+  padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
 button[type="submit"] {
   background-color: #004b8d;
   color: white;
   border: none;
-  padding: 10px 15px;
+  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 button[type="submit"]:hover {
   background-color: #0066cc;
 }
 
+/* Estilos de tabla de datos */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+.data-table th, .data-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+.data-table th {
+    background-color: #0055a5;
+    color: white;
+}
+
+/* Estilos de lista y footer */
 footer {
   text-align: center;
   background-color: #003366;
   color: white;
-  padding: 10px;
+  padding: 15px;
   position: fixed;
   bottom: 0;
   width: 100%;
+  box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+  font-size: 0.9em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #eef3f8;
+  margin-bottom: 8px;
+  padding: 12px;
+  border-left: 5px solid #0055a5;
+  border-radius: 5px;
+}
+
+/* Alerta Legal */
+.alerta-legal {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 15px;
 }
