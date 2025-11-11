@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DNGDT - Portal de Transparencia y Acceso a la Información Pública</title>
   <style>
-    /* El CSS se incluye aquí para hacer el prototipo funcional sin style.css */
+    /* Estilos (CSS) */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -144,6 +144,21 @@
       border-radius: 5px;
       margin-top: 15px;
     }
+    
+    .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+    .data-table th, .data-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    .data-table th {
+        background-color: #0055a5;
+        color: white;
+    }
   </style>
 </head>
 <body>
@@ -163,19 +178,75 @@
     <section id="inicio" class="activo">
       <h2>Bienvenido al Portal de Transparencia de la DNGDT</h2>
       <p>Este portal permite gestionar solicitudes de información pública y publicar datos abiertos conforme a la <b>Ley de Acceso a la Información Pública (LAIP)</b>, garantizando el **principio de máxima publicidad (Art. 5)**.</p>
-      <p>Nuestra misión es el desarrollo territorial con máxima **transparencia activa**.</p>
+      <p>Nuestra misión es el desarrollo territorial con máxima **transparencia activa** y rendición de cuentas a la ciudadanía.</p>
     </section>
     
     <section id="transparencia">
         <h2>Transparencia Activa (Información de Oficio)</h2>
         <p>Cumplimiento de los Artículos 10 al 12 de la LAIP. Publicación permanente y proactiva de información institucional.</p>
         
-        <h3>Contenidos Requeridos por Ley:</h3>
+        <h3>Organigrama y Estructura Institucional</h3>
+        <p>La DNGDT se estructura en tres direcciones clave para la planificación y ejecución de proyectos.</p>
         <ul>
-            <li>**Organigrama Institucional y Directorio:** Estructura administrativa y salarios del personal (Art. 10 lit. a, b, i). <a href="#">[Descargar Organigrama PDF]</a></li>
-            <li>**Presupuestos y Gastos:** Detalle de asignaciones presupuestarias y su ejecución trimestral (Art. 10 lit. d, k). <a href="#">[Ver Ejecución Presupuestaria 2025]</a></li>
-            <li>**Contrataciones y Licitaciones:** Registro de todas las adquisiciones de bienes y servicios (Art. 10 lit. f). <a href="#">[Ver Registro Público de Contrataciones]</a></li>
-            <li>**Informes de Auditoría:** Resultados de auditorías internas y externas (Art. 10 lit. g). <a href="#">[Descargar Informes 2023-2024]</a></li>
+            <li>**Dirección Superior:** Director Nacional (Sra. Elena Flores). <a href="#">[Ver Hoja de Vida]</a></li>
+            <li>**Dirección de Planificación Territorial:** Encargada del Ordenamiento y Zonificación.</li>
+            <li>**Dirección de Proyectos y Fondos:** Gestiona los desembolsos y la ejecución de obras.</li>
+        </ul>
+        <a href="#">[Descargar Organigrama Detallado (PDF 2025)]</a>
+
+        <h3>Presupuestos y Ejecución (Año Fiscal 2025)</h3>
+        <p>Presupuesto Total Asignado: **$15,000,000 USD**</p>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Área</th>
+                    <th>Presupuesto Asignado</th>
+                    <th>Ejecución Q1 (Ene-Mar)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Salarios y Gastos Operativos</td>
+                    <td>$3,500,000</td>
+                    <td>$850,000 (24.2%)</td>
+                </tr>
+                <tr>
+                    <td>Proyectos de Infraestructura Local</td>
+                    <td>$10,000,000</td>
+                    <td>$1,200,000 (12.0%)</td>
+                </tr>
+                <tr>
+                    <td>Auditoría y Transparencia</td>
+                    <td>$1,500,000</td>
+                    <td>$350,000 (23.3%)</td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="#">[Ver Detalle de Gastos Mensuales (Excel)]</a>
+        
+        <h3>Contrataciones y Licitaciones (Último Trimestre)</h3>
+        <p>Adquisiciones mayores a $20,000 USD. Información actualizada al 31 de octubre de 2025.</p>
+        <ul>
+            <li>**Licitación Pública DNGDT-LP-015:** Adquisición de 10 vehículos 4x4 para supervisión territorial.
+                <ul>
+                    <li>**Empresa Adjudicada:** AutoGestión S.A. de C.V.</li>
+                    <li>**Monto:** $350,000 USD.</li>
+                    <li><a href="#">[Ver Contrato Completo]</a></li>
+                </ul>
+            </li>
+            <li>**Contrato Directo DNGDT-CD-008:** Servicio de consultoría para evaluación de riesgo sísmico.
+                <ul>
+                    <li>**Empresa Adjudicada:** GeoRisk Ltda.</li>
+                    <li>**Monto:** $45,000 USD.</li>
+                    <li><a href="#">[Ver Resumen de Adjudicación]</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Informes de Auditoría</h3>
+        <ul>
+            <li>**Informe de la Corte de Cuentas (2024):** No se encontraron hallazgos significativos. <a href="#">[Descargar Resumen PDF]</a></li>
+            <li>**Auditoría Interna Q2 2025:** Recomendaciones para la optimización del proceso de compra de suministros. <a href="#">[Descargar Informe Completo]</a></li>
         </ul>
     </section>
 
@@ -184,9 +255,9 @@
       <p>Toda solicitud será respondida en el plazo legal máximo de **10 días hábiles (Art. 71 LAIP)**.</p>
       <form id="formSolicitud">
         <label for="dui">DUI (sin guiones, opcional):</label>
-        <input type="text" id="dui" pattern="[0-9]{8}[0-9]" title="Ocho números, un guion, un número de verificación." placeholder="00000000-0">
+        <input type="text" id="dui" pattern="[0-9]{8}[0-9]" placeholder="00000000-0">
 
-        <label for="nombre">Nombre completo (o seudónimo, si no desea identificarse):</label>
+        <label for="nombre">Nombre completo (o seudónimo):</label>
         <input type="text" id="nombre" required>
 
         <label for="correo">Correo electrónico (para notificación):</label>
@@ -200,18 +271,20 @@
 
       <h3>Historial de Solicitudes Recibidas (Simulación)</h3>
       <ul id="listaSolicitudes">
-        <li>**ID: S-2025-0042** - Solicitud de Contrato de Mantenimiento. **Estado:** Resuelta (Información entregada).</li>
+        <li>**ID: S-2025-0045** - Solicitud de listado de beneficiarios del programa "Mi Barrio Seguro". **Estado:** Resuelta (Información entregada, datos personales anonimizados).</li>
+        <li>**ID: S-2025-0044** - Monto total invertido en proyectos viales en el departamento de Morazán en 2024. **Estado:** En Proceso (Plazo restante: 5 días hábiles).</li>
+        <li>**ID: S-2025-0043** - Copia del acuerdo de creación de la Dirección de Fondos. **Estado:** Resuelta (Documento Entregado).</li>
       </ul>
     </section>
 
     <section id="datos">
       <h2>Datos Abiertos para Descarga y Reutilización</h2>
-      <p>Datos en formatos abiertos (CSV, JSON, XML) para su procesamiento y análisis, conforme al principio de máxima accesibilidad.</p>
+      <p>Datos en formatos abiertos (CSV, JSON, XML) para su procesamiento y análisis, conforme al principio de máxima accesibilidad. Todos los datos están libres de información clasificada o confidencial.</p>
       <ul id="listaDatos">
-        <li><a href="https://ejemplo.com/presupuesto/2025.csv">Presupuesto Anual 2025 (CSV)</a> - **Formato Reutilizable**</li>
-        <li><a href="https://ejemplo.com/contrataciones.json">Contrataciones y Compras (JSON)</a> - **Formato Reutilizable**</li>
-        <li><a href="https://ejemplo.com/archivos/personal_anonimizado.xlsx">Listado de Personal (XLSX)</a> - **Datos Anónimos**</li>
-        <li><a href="https://ejemplo.com/georeferencias_proyectos.xml">Georeferencias de Proyectos (XML)</a> - **Formato Reutilizable**</li>
+        <li>**Registro de Proyectos Territoriales (2024-2025):** Ubicación, monto y estado. (Formato **CSV**) <a href="#">[Descargar 2.5 MB]</a></li>
+        <li>**Detalle de Licitaciones Históricas:** Montos adjudicados y empresas ganadoras (Últimos 3 años). (Formato **JSON**) <a href="#">[Descargar 850 KB]</a></li>
+        <li>**Directorio de Funcionarios Públicos (Anonimizado):** Puesto, salario, fecha de inicio (Excluye información privada). (Formato **XLSX**) <a href="#">[Descargar 50 KB]</a></li>
+        <li>**Informes de Impacto Ambiental Emitidos (2025):** Resumen de conclusiones para proyectos aprobados. (Formato **XML**) <a href="#">[Descargar 1.2 MB]</a></li>
       </ul>
     </section>
 
@@ -220,35 +293,34 @@
 
       <h3>Información Reservada y Confidencial (Arts. 19 y 20 LAIP)</h3>
       <div class="alerta-legal">
-        <p><strong>Excepciones al Acceso (Arts. 19 y 20):</strong></p>
+        <p><strong>Excepciones al Acceso:</strong></p>
         <ul>
-          <li>**Reservada (Art. 19):** Divulgación temporalmente restringida si daña el interés público (ej. seguridad nacional, secreto de las investigaciones). **Debe tener una justificación clara y temporal.**</li>
-          <li>**Confidencial (Art. 20):** Información privada o personal (ej. datos de salud, opiniones personales no oficiales). Esta protección es permanente.</li>
+          <li>**Reservada (Art. 19):** Por ejemplo, los **mapas detallados de riesgo sísmico** que, si se divulgan sin contexto, podrían comprometer la **seguridad pública** o la **planificación estratégica de emergencia**. **Clasificación temporal de 1 año.**</li>
+          <li>**Confidencial (Art. 20):** **Opiniones personales de un empleado** en un memorando interno sobre un compañero o los **registros médicos** de cualquier funcionario. **Protección permanente.**</li>
         </ul>
-        <p>En caso de negativa, la institución debe citar el artículo legal y justificar la clasificación.</p>
+        <p>En caso de negativa, la institución debe citar el artículo legal y justificar la clasificación por escrito al solicitante.</p>
       </div>
 
       <h3>Recursos ante el IAIP (Arts. 29 y 96 LAIP)</h3>
-      <p>Si la respuesta es negativa, incompleta o no se da en el plazo, el ciudadano puede:</p>
+      <p>Si la DNGDT deniega la información, la entrega incompleta, o no responde en el plazo legal, usted tiene derecho a:</p>
       <ol>
-        <li>**Recurso de Revisión (Art. 96):** Presentarlo ante el Oficial de Información de la DNGDT en 15 días hábiles.</li>
-        <li>**Recurso de Apelación (Art. 29):** Si el Recurso de Revisión es denegado, puede apelarse directamente ante el **Instituto de Acceso a la Información Pública (IAIP)**.</li>
+        <li>**Recurso de Revisión (Art. 96):** Presentarlo ante el Oficial de Información de la DNGDT en un plazo no mayor a **15 días hábiles**.</li>
+        <li>**Recurso de Apelación (Art. 29):** Si el Recurso de Revisión es denegado o no hay respuesta, puede interponer una apelación directamente ante el **Instituto de Acceso a la Información Pública (IAIP)**.</li>
       </ol>
-      <p>Para más información, visite el sitio oficial del IAIP.</p>
+      <p>Puede consultar la guía y los formularios en el sitio web oficial del IAIP para ejercer su derecho de apelación.</p>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Dirección Nacional de Gestión y Desarrollo Territorial (DNGDT) | Unidad de Acceso a la Información Pública.</p>
+    <p>© 2025 Dirección Nacional de Gestión y Desarrollo Territorial (DNGDT) | Unidad de Acceso a la Información Pública | Diciembre 2025.</p>
   </footer>
 
   <script>
-    // Inicializar la sección de inicio
+    // JavaScript para la funcionalidad de navegación y simulación del formulario.
     document.addEventListener('DOMContentLoaded', () => {
       mostrarSeccion('inicio');
     });
 
-    // Función para mostrar la sección activa
     function mostrarSeccion(id) {
       document.querySelectorAll('section').forEach(section => {
         section.classList.remove('activo');
@@ -256,7 +328,6 @@
       document.getElementById(id).classList.add('activo');
     }
 
-    // SIMULACIÓN DE ENVÍO DE FORMULARIO (JavaScript)
     document.getElementById('formSolicitud').addEventListener('submit', function(e) {
       e.preventDefault();
 
@@ -264,28 +335,19 @@
       const descripcion = document.getElementById('descripcion').value;
       const lista = document.getElementById('listaSolicitudes');
 
-      // Generar un ID ficticio para la solicitud
       const newId = 'S-2025-' + Math.floor(Math.random() * 1000).toString().padStart(4, '0');
 
-      // Crear el nuevo elemento de lista
       const newSolicitud = document.createElement('li');
       newSolicitud.innerHTML = `**ID: ${newId}** - Solicitud sobre: ${descripcion.substring(0, 50)}... **Estado:** Recibida (Respuesta máxima en 10 días hábiles).`;
 
-      // Insertar el nuevo elemento al principio de la lista
       lista.prepend(newSolicitud);
 
       alert(`Su solicitud ha sido enviada con el ID: ${newId}. Se responderá en el plazo legal (Art. 71 LAIP).`);
 
-      // Limpiar el formulario
       this.reset();
     });
-    
-    // El script de Jotform fue eliminado ya que no es necesario para la simulación del prototipo
-    
   </script>
 </body>
 </html>
-
-
 
 
